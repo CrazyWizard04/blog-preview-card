@@ -101,7 +101,7 @@ article {
   0% {
     opacity: 0;
     box-shadow: 0 0 var(--gray-950);
-    transform: translateY(50px);
+    transform: translateX(0) translateY(50px);
   }
   50% {
     opacity: 1;
