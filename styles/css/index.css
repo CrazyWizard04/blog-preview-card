@@ -97,17 +97,6 @@ article {
   font-weight: 800;
 }
 
-@keyframes slide-in {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @keyframes appear-card {
   0% {
     opacity: 0;

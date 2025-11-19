@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-yellow: hsl(47, 88%, 63%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-gray-500: hsl(0, 0%, 42%);
+  --color-gray-950: hsl(0, 0%, 7%);
+
+  --text-paragraph: 16px;
+  --font-figtree: "Figtree", sans-serif;
+  --animate-appear-card: appear-card 0.6s ease-in-out both;
+}
+
+@layer base {
+  * {
+    @apply m-0 p-0 scroll-smooth box-border font-figtree;
+  }
+
+  body {
+    @apply min-h-screen bg-yellow flex items-center justify-center;
+  }
+
+  img {
+    @apply pointer-events-none;
+  }
+
+  article {
+    @apply bg-white p-5 max-w-[380px] border-1 border-gray-950 rounded-xl flex flex-col items-start gap-3 animate-appear-card;
+  }
+
+  .illustration {
+    @apply w-full rounded-xl;
+  }
+
+  .tag {
+    @apply bg-yellow px-3 py-2 text-gray-950 font-[800] rounded-md;
+  }
+
+  .date {
+    @apply text-gray-950 text-paragraph font-[500];
+  }
+
+  .heading {
+    @apply text-gray-950 text-2xl font-[800] cursor-pointer;
+  }
+
+  .info {
+    @apply text-gray-500 text-paragraph font-[500] leading-6;
+  }
+
+  .author {
+    @apply flex items-center justify-center gap-3;
+  }
+
+  .avatar {
+    @apply w-9 h-9;
+  }
+
+  .name {
+    @apply text-gray-950 font-[800];
+  }
+}
+
+@keyframes appear-card {
+  0% {
+    opacity: 0;
+    box-shadow: 0 0 var(--color-gray-950);
+    transform: translateY(50px);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 var(--color-gray-950);
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    opacity: 1;
+    box-shadow: 8px 8px var(--color-gray-950);
+    transform: translateX(-8px) translateY(-8px);
+  }
+}
