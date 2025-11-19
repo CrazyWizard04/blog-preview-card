@@ -39,6 +39,7 @@ article {
   flex-direction: column;
   align-items: start;
   gap: 16px;
+  will-change: opacity, transform, box-shadow;
   animation: appear-card 0.6s ease-in-out both;
 }
 
@@ -101,16 +102,16 @@ article {
   0% {
     opacity: 0;
     box-shadow: 0 0 var(--gray-950);
-    transform: translateX(0) translateY(50px);
+    transform: translate3d(0, 50px, 0);
   }
   50% {
     opacity: 1;
     box-shadow: 0 0 var(--gray-950);
-    transform: translateX(0) translateY(0);
+    transform: translate3d(0, 0, 0);
   }
   100% {
     opacity: 1;
     box-shadow: 8px 8px var(--gray-950);
-    transform: translateX(-8px) translateY(-8px);
+    transform: translate3d(-8px, -8px, 0);
   }
 }

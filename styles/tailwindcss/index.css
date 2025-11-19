@@ -12,6 +12,10 @@
   --animate-appear-card: appear-card 0.6s ease-in-out both;
 }
 
+@utility card-appear {
+  @apply will-change-[opacity,transform,box-shadow] animate-appear-card;
+}
+
 @layer base {
   * {
     @apply m-0 p-0 scroll-smooth box-border font-figtree;
@@ -26,7 +30,7 @@
   }
 
   article {
-    @apply bg-white p-5 max-w-[380px] border-1 border-gray-950 rounded-xl flex flex-col items-start gap-3 animate-appear-card;
+    @apply bg-white p-5 max-w-[380px] border-1 border-gray-950 rounded-xl flex flex-col items-start gap-3 card-appear;
   }
 
   .illustration {
@@ -66,16 +70,16 @@
   0% {
     opacity: 0;
     box-shadow: 0 0 var(--color-gray-950);
-    transform: translateX(0) translateY(50px);
+    transform: translate3d(0, 50px, 0);
   }
   50% {
     opacity: 1;
     box-shadow: 0 0 var(--color-gray-950);
-    transform: translateX(0) translateY(0);
+    transform: translate3d(0, 0, 0);
   }
   100% {
     opacity: 1;
     box-shadow: 8px 8px var(--color-gray-950);
-    transform: translateX(-8px) translateY(-8px);
+    transform: translate3d(-8px, -8px, 0);
   }
 }
