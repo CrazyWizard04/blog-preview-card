@@ -69,17 +69,17 @@
 @keyframes appear-card {
   0% {
     opacity: 0;
-    box-shadow: 0 0 var(--color-gray-950);
+    box-shadow: 0 0 0 var(--color-gray-950);
     transform: translate3d(0, 50px, 0);
   }
   50% {
     opacity: 1;
-    box-shadow: 0 0 var(--color-gray-950);
+    box-shadow: 0 0 0  var(--color-gray-950);
     transform: translate3d(0, 0, 0);
   }
   100% {
     opacity: 1;
-    box-shadow: 8px 8px var(--color-gray-950);
+    box-shadow: 8px 8px 0 var(--color-gray-950);
     transform: translate3d(-8px, -8px, 0);
   }
 }
