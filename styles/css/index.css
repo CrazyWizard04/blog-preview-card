@@ -4,7 +4,7 @@
   --gray-500: hsl(0, 0%, 42%);
   --gray-950: hsl(0, 0%, 7%);
 
-  --font-paragraph: 16px;
+  --font-paragraph: clamp(15px, 2.5vw, 16px);
 }
 
 * {
