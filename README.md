@@ -1,6 +1,6 @@
 # 🌐 Frontend Mentor - Blog preview card solution
 
-This is my solution for the [Blog preview card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/blog-preview-card-ckPaj01IcS). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is my solution for the [Blog preview card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/blog-preview-card-ckPaj01IcS). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ---
 
@@ -35,7 +35,7 @@ The component also includes a nice slide-in and shadow-pop animation that plays 
 ### 🔗 Links
 
 - 💡 Solution URL: [Frontend Mentor Submission](https://www.frontendmentor.io/solutions/blog-preview-card-with-css-and-tailwindcss-LR2oXSDOXU)
-- 🌐 Live Site URL: [Live Demo](https://thewizard04-blog-card.netlify.app/)
+- 🌐 Live Site URL: [Live Demo](https://thewizard04-blog-card.vercel.app)
 
 ---
 
@@ -91,7 +91,7 @@ Here are the snippets for the animation:
    <link rel="stylesheet" href="styles/tailwindcss/output.css" />
    ```
 2. **Start using CSS in your HTML**
-    ```html
+   ```html
    <link rel="stylesheet" href="styles/css/index.css" />
    ```
 
