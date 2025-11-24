@@ -34,8 +34,8 @@ The component also includes a nice slide-in and shadow-pop animation that plays 
 
 ### 🔗 Links
 
-- 💡 Solution URL: [Frontend Mentor Submission](https://www.frontendmentor.io/solutions/qr-component-with-css-and-tailwindcss-mVjK2QSjkn)
-- 🌐 Live Site URL: [Live Demo](https://thewizard04-qr-component.netlify.app)
+- 💡 Solution URL: [Frontend Mentor Submission](https://www.frontendmentor.io/solutions/blog-preview-card-with-css-and-tailwindcss-LR2oXSDOXU)
+- 🌐 Live Site URL: [Live Demo](https://thewizard04-blog-card.netlify.app/)
 
 ---
 

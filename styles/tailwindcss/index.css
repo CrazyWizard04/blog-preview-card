@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -7,9 +6,16 @@
   --color-gray-500: hsl(0, 0%, 42%);
   --color-gray-950: hsl(0, 0%, 7%);
 
-  --text-paragraph: 16px;
+  --text-base: clamp(15px, 2.5vw, 16px);
+  --text-heading: clamp(1.35rem, 2.5vw, 1.5rem);
+
   --font-figtree: "Figtree", sans-serif;
+  --card-container: clamp(22rem, 40vw, 23.75rem);
   --animate-appear-card: appear-card 0.6s ease-in-out both;
+}
+
+@utility flex-col-start {
+  @apply flex flex-col items-start;
 }
 
 @layer base {
@@ -18,38 +24,36 @@
   }
 
   body {
-    @apply min-h-screen bg-yellow flex items-center justify-center;
+    @apply min-h-screen grid place-content-center text-base font-medium leading-[1.5] text-gray-950 bg-yellow;
   }
 
-  img {
-    @apply pointer-events-none;
+  main {
+    @apply max-w-[var(--card-container)] p-6 rounded-2xl bg-white flex-col-start gap-6 border-1 border-gray-950 animate-appear-card;
+  }
+}
+
+@layer components {
+  .blog-illustration {
+    @apply w-full rounded-lg pointer-events-none;
   }
 
-  article {
-    @apply bg-white p-5 max-w-[380px] border-1 border-gray-950 rounded-xl flex flex-col items-start gap-3 animate-appear-card;
+  .blog-details {
+    @apply flex-col-start gap-3;
   }
 
-  .illustration {
-    @apply w-full rounded-xl;
-  }
-
-  .tag {
-    @apply bg-yellow px-3 py-2 text-gray-950 font-[800] rounded-md;
-  }
-
-  .date {
-    @apply text-gray-950 text-paragraph font-[500];
+  .category {
+    @apply bg-yellow px-3 py-1 font-extrabold rounded-sm;
   }
 
   .heading {
-    @apply text-gray-950 text-2xl font-[800] cursor-pointer;
+    @apply text-heading font-extrabold cursor-pointer hover:text-yellow duration-200;
   }
 
-  .info {
-    @apply text-gray-500 text-paragraph font-[500] leading-6;
+  .paragraph {
+    @apply text-gray-500;
   }
 
-  .author {
+  .blog-author {
     @apply flex items-center justify-center gap-3;
   }
 
@@ -58,7 +62,7 @@
   }
 
   .name {
-    @apply text-gray-950 font-[800];
+    @apply font-extrabold;
   }
 }
 
@@ -66,16 +70,16 @@
   0% {
     opacity: 0;
     box-shadow: 0 0 var(--color-gray-950);
-    transform: translateX(0) translateY(50px);
+    transform: translate3d(0, 50px, 0);
   }
   50% {
     opacity: 1;
     box-shadow: 0 0 var(--color-gray-950);
-    transform: translateX(0) translateY(0);
+    transform: translate3d(0, 0, 0);
   }
   100% {
     opacity: 1;
     box-shadow: 8px 8px var(--color-gray-950);
-    transform: translateX(-8px) translateY(-8px);
+    transform: translate3d(-8px, -8px, 0);
   }
 }
