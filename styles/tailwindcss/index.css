@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@theme {
+  --color-yellow: hsl(47, 88%, 63%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-gray-500: hsl(0, 0%, 42%);
+  --color-gray-950: hsl(0, 0%, 7%);
+
+  --text-base: clamp(15px, 2.5vw, 16px);
+  --text-heading: clamp(1.35rem, 2.5vw, 1.5rem);
+
+  --font-figtree: "Figtree", sans-serif;
+  --card-container: clamp(22rem, 40vw, 23.75rem);
+  --animate-appear-card: appear-card 0.6s ease-in-out both;
+}
+
+@utility flex-col-start {
+  @apply flex flex-col items-start;
+}
+
+@layer base {
+  *, *::before, *::after {
+    @apply m-0 p-0 box-border;
+  }
+
+  body {
+    @apply min-h-screen grid place-content-center font-figtree text-base font-medium leading-[1.5] text-gray-950 bg-yellow;
+  }
+}
+
+@layer components {
+  .blog-card {
+    @apply max-w-[var(--card-container)] p-6 rounded-2xl bg-white flex-col-start gap-6 border-1 border-gray-950 animate-appear-card;
+  }
+
+  .blog-illustration {
+    @apply w-full rounded-lg pointer-events-none;
+  }
+
+  .blog-details {
+    @apply flex-col-start gap-3;
+  }
+
+  .category {
+    @apply bg-yellow px-3 py-1 font-extrabold rounded-sm;
+  }
+
+  .title {
+    @apply text-heading font-extrabold;
+  }
+
+  .title-link {
+    @apply text-inherit decoration-0 transition-colors duration-400;
+  }
+
+  .title-link:hover, .title-link:focus-visible {
+    @apply text-yellow;
+  }
+
+  .title-link:focus-visible {
+    @apply outline-2 outline-gray-950 outline-offset-4 rounded-sm;
+  }
+
+  .description {
+    @apply text-gray-500;
+  }
+
+  .author {
+    @apply flex items-center justify-center gap-3;
+  }
+
+  .avatar {
+    @apply w-9 h-9 rounded-[50%];
+  }
+
+  .name {
+    @apply font-extrabold;
+  }
+}
+
+@keyframes appear-card {
+  0% {
+    opacity: 0;
+    box-shadow: 0 0 var(--color-gray-950);
+    transform: translate3d(0, 50px, 0);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 var(--color-gray-950);
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    box-shadow: 8px 8px var(--color-gray-950);
+    transform: translate3d(-8px, -8px, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blog-card {
+    animation: none;
+    box-shadow: 8px 8px var(--color-gray-950);
+    transform: none;
+  }
+}
+
